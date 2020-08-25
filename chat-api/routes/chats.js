@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+//const moment = require('moment');
 const Chat = require('../models/Chat')
 
 
@@ -12,6 +13,8 @@ router.get('/', function (req, res, next) {
     res.status(500).json(err)
   })
 });
+
+
 
 router.post('/', function (req, res, next) {
   const { id, name, message } = req.body;

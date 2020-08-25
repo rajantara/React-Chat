@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react';
 import Chatform from './Chatform'
 import Chatlist from './Chatlist'
 import axios from 'axios'
+
+
+
 
 const request = axios.create({
     baseURL: 'http://localhost:3001/api/',
@@ -9,7 +12,7 @@ const request = axios.create({
     headers: {}
 });
 
-export default class Chatbox extends React.Component {
+export default class Chatbox extends Component {
 
     constructor(props) {
         super(props)
@@ -20,7 +23,7 @@ export default class Chatbox extends React.Component {
     }
 
 
-  
+
     componentDidMount() {
         request.get('chats').then(data => {
             const completeData = data.data.map(item => {
@@ -87,9 +90,18 @@ export default class Chatbox extends React.Component {
 
     render() {
         return (
-            <div>
-                <Chatlist data={this.state.data} remove={this.removeChat}  resend={this.resendChat}  />
-                <Chatform add={this.addChat} />
+            <div class="chat_window">
+                <div class="top_menu">
+                    <div className="buttons">
+                        <div className="button close" />
+                        <div className="button minimize" />
+                        <div className="button maximize" />
+                    </div><div className="title">🆁🅴🅰🅲🆃 🅲🅷🅰🆃</div>
+                </div>
+                <div className="card-body msg_card_body">
+                    <Chatlist data={this.state.data} remove={this.removeChat} resend={this.resendChat} />
+                    <Chatform add={this.addChat} />
+                </div>
             </div>
 
         )
