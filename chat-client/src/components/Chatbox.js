@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import Chatform from './Chatform'
 import Chatlist from './Chatlist'
+//import io from 'socket.io-client'
 import axios from 'axios'
 
 
 
 
+
+
+
+//var socket = io.connect('http://localhost:3002/')
 const request = axios.create({
     baseURL: 'http://localhost:3001/api/',
     timeout: 1000,
