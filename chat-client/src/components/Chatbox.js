@@ -7,9 +7,6 @@ import axios from 'axios'
 
 
 
-
-
-
 //var socket = io.connect('http://localhost:3002/')
 const request = axios.create({
     baseURL: 'http://localhost:3001/api/',
@@ -103,10 +100,10 @@ export default class Chatbox extends Component {
                         <div className="button maximize" />
                     </div><div className="title">🆁🅴🅰🅲🆃 🅲🅷🅰🆃</div>
                 </div>
-                <div className="card-body msg_card_body">
+                <ul className="messages">
                     <Chatlist data={this.state.data} remove={this.removeChat} resend={this.resendChat} />
+                </ul>
                     <Chatform add={this.addChat} />
-                </div>
             </div>
 
         )

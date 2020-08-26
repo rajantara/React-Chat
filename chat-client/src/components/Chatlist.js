@@ -13,6 +13,6 @@ export default function Chatlist(props) {
         />)
 
     return (
-        <ul>{chatli}</ul>
+        <div>{chatli}</div>
     )
 }

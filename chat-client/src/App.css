@@ -116,7 +116,7 @@ body,html{
 }
 .messages .message .text_wrapper {
   display: inline-block;
-  padding: 10px;
+  padding: 20px;
   border-radius: 6px;
   width: calc(100% - 85px);
   min-width: 100px;
@@ -157,7 +157,7 @@ body,html{
   height: 38px;
   border-radius: 25px;
   border: 1px solid #bcbdc0;
-  width: calc(100% - 2px);
+  width: calc(100% - 1px);
   position: relative;
   padding: 0 20px;
 }
@@ -165,14 +165,14 @@ body,html{
   border: none;
   height: 100%;
   box-sizing: border-box;
-  width: calc(100% - 160px);
+  width: calc(100% - 40px);
   position: absolute;
   outline-width: 0;
   color: gray;
 }
 .bottom_wrapper .send_message {
-  width: 130px;
-  height: 100%;
+  width: 140px;
+  height: 50px;
   display: inline-block;
   border-radius: 50px;
   background-color: #a3d063;
@@ -210,72 +210,3 @@ button css */
 .btn-send {
   background-image: linear-gradient(to right, #ff4b1f 0%, #1fddff 51%, #ff4b1f 100%)
 }
-
-
-/* bakti css */
-
-
-/* ul {
-  width:100%;
-  list-style-type: none;
-  padding:18px;
-  position:absolute;
-  bottom:30px;
-  display:flex;
-  flex-direction: column;
-  top:0;
-  overflow-y:scroll;
-} */
-
-
-.msg_send_btn {
-  background: #05728f none repeat scroll 0 0;
-  border: medium none;
-  border-radius: 50%;
-  color: #fff;
-  cursor: pointer;
-  font-size: 20px;
-  height: 33px;
-  position: absolute;
-  right: 0;
-  top: 15px;
-  width: 40px;
-}
-
-
-.reply-send i {
-  text-align: center;
-  padding: 5px !important;
-  color: #93918f;
-  cursor: pointer;
-}
-
-.fa {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
-}
-
-.btn-lg {
-  padding: 7px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 12px;
-}
-
-
-
-/* 
-end button send */
-
-
-
-

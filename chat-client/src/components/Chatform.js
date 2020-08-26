@@ -28,7 +28,7 @@ export default class Chatform extends Component {
 
   render() {
     return (
-
+     
       <div className="bottom_wrapper clearfix">
         <form onSubmit={this.handleSubmit}>
           <div className="message_input_wrapper">
