@@ -28,7 +28,7 @@ export default class Chatform extends Component {
 
   render() {
     return (
-     
+
       <div className="bottom_wrapper clearfix">
         <form onSubmit={this.handleSubmit}>
           <div className="message_input_wrapper">
@@ -38,7 +38,7 @@ export default class Chatform extends Component {
             <input class="message_input" placeholder="Type your message here..." value={this.state.message} onChange={this.handleChangeMessage} />
           </div>
           <button class="btn btn-send btn-lg btn-block" id="btn-chat">
-            𝕊𝕖𝕟𝕕</button>
+            <i class="fas fas2 fa-envelope"></i></button>
         </form>
       </div>
 

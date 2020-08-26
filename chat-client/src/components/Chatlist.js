@@ -2,8 +2,9 @@ import React from 'react'
 import Chatitem from './Chatitem'
 
 export default function Chatlist(props) {
-    const chatli = props.data.map(item =>
+    const chatli = props.data.map((item,index) =>
         <Chatitem
+            index = {index}
             key = {item.id}
             name={item.name}
             message={item.message}

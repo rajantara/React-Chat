@@ -27,6 +27,14 @@ export default class Chatbox extends Component {
 
 
     componentDidMount() {
+        this.loadChat()
+
+        
+    }
+
+
+
+    loadChat(){
         request.get('chats').then(data => {
             const completeData = data.data.map(item => {
                 item.sent = true;
@@ -35,9 +43,13 @@ export default class Chatbox extends Component {
             console.log(completeData)
             this.setState({ data: completeData })
         }).catch(err => {
-            console.log(err)
+            console.log('error dude',err)
         })
+
     }
+
+
+
 
 
     addChat(name, message) {
@@ -64,11 +76,23 @@ export default class Chatbox extends Component {
         })
     }
 
+
+
+
     removeChat(id) {
         this.setState((state, props) => ({
             data: state.data.filter(item => item.id !== id)
         }));
+
+        request.delete(`chats/${id}`).then(data => {
+            console.log(data);
+        }).catch(err => {
+            console.log(err);
+        })
     }
+
+
+
 
     resendChat(id, name, message) {
         request.post('chats', {
@@ -76,6 +100,7 @@ export default class Chatbox extends Component {
             name,
             message
         }).then(data => {
+            console.log(data)
             this.setState((state, props) => ({
                 data: state.data.map(item => {
                     if (item.id === id) {
@@ -88,6 +113,8 @@ export default class Chatbox extends Component {
             console.log(err)
         })
     }
+
+
 
 
     render() {

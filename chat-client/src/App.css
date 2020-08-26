@@ -65,7 +65,7 @@ body,html{
   padding: 20px 10px 0 10px;
   margin: 0;
   height: 347px;
-  overflow: scroll;
+  overflow: auto;
 }
 .messages .message {
   clear: both;
@@ -95,7 +95,7 @@ body,html{
 }
 .messages .message.right .text_wrapper {
   background-color: #c7eafc;
-  margin-right: 20px;
+  margin-right: 28px;
   float: right;
 }
 .messages .message.right .text_wrapper::after, .messages .message.right .text_wrapper::before {
@@ -116,9 +116,9 @@ body,html{
 }
 .messages .message .text_wrapper {
   display: inline-block;
-  padding: 20px;
-  border-radius: 6px;
-  width: calc(100% - 85px);
+  padding: 7px;
+  border-radius: 20px;
+  width: calc(100% - 89px);
   min-width: 100px;
   position: relative;
 }
@@ -140,7 +140,7 @@ body,html{
   margin-top: -2px;
 }
 .messages .message .text_wrapper .text {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 300;
 }
 
@@ -209,4 +209,27 @@ button css */
 
 .btn-send {
   background-image: linear-gradient(to right, #ff4b1f 0%, #1fddff 51%, #ff4b1f 100%)
+}
+
+
+
+.fa, .fas {
+  font-weight: 900;
+  resize: auto;
+  size: b5;
+  font-size: large;
+}
+
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: large;
+}
+
+.fa, .fas2 {
+  font-weight: 900;
+  resize: auto;
+  size: b5;
+  font-size: xx-large;
 }
