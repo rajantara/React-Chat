@@ -26,13 +26,11 @@ export default function Chatitem(props) {
                 <ReactMarkdown className="mb-0 text-dark" source={props.message} />
             </div>
             {!props.sent && <p style={{ color: 'red', 'font-size': '8pt' }}>network failed</p>}
-            <i class="fas fa-trash-alt" onClick={props.sent ? props.hapus : props.resend}>{props.sent ? '' : 'kirim ulang'}</i>
+            {!props.sent && <i className="fas fa-redo" onClick={props.resend}></i>}
+            {props.sent && <i className="fas fa-trash-alt" onClick={props.hapus}></i>}
             <time className="text-dark ml-3 msg-time"> {dateConvert(props.message.time)}</time>
         </li>
 
 
     )
 }
-
-
-
