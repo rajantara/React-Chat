@@ -9,6 +9,7 @@ export default function Chatlist(props) {
             name={item.name}
             message={item.message}
             sent={item.sent}
+            time={item.time}
             resend={() => props.resend(item.id, item.name, item.message)}
             hapus={() => props.remove(item.id)}
         />)

@@ -3,6 +3,7 @@ import Chatform from './Chatform'
 import Chatlist from './Chatlist'
 import io from 'socket.io-client'
 import axios from 'axios'
+import moment from 'moment'
 
 
 
@@ -29,10 +30,11 @@ export default class Chatbox extends Component {
     componentDidMount() {
         this.loadChat()
 
+        const time = moment().format('h:mm a')
         socket.on('chat', function (data) {
             console.log(data)
             this.setState((state, props) => (
-                {data: [...state.data, { ...data, sent: true }]
+                {data: [...state.data, { ...data, time, sent: true }]
             }))
         }.bind(this))
 
@@ -71,8 +73,10 @@ export default class Chatbox extends Component {
 
     addChat(name, message) {
         const id = Date.now()
+        const time = moment().format('h:mm a')
+
         this.setState((state, props) => ({
-            data: [...state.data, { id, name, message, sent: true }]
+            data: [...state.data, { id, name, message, time, sent: true }]
         }));
 
         socket.emit('chat', {

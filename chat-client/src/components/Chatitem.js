@@ -28,7 +28,7 @@ export default function Chatitem(props) {
             {!props.sent && <p style={{ color: 'red', 'font-size': '8pt' }}>network failed</p>}
             {!props.sent && <i className="fas fa-redo" onClick={props.resend}></i>}
             {props.sent && <i className="fas fa-trash-alt" onClick={props.hapus}></i>}
-            <time className="text-dark ml-3 msg-time"> {dateConvert(props.message.time)}</time>
+            <time className="text-dark ml-3 msg-time"> {dateConvert(props.message.time)}. {props.time}</time>
         </li>
 
 
